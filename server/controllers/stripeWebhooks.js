@@ -9,7 +9,9 @@ export const stripeWebhooks=async(request,response)=>{
 
     try {
         event=stripeInstance.webhooks.constructEvent(request.body,sig,process.env.STRIPE_WEBHOOK_SECRET)
+        console.log("✅ Webhook received:", event.type);
     } catch (error) {
+        console.error("❌ Webhook signature error:", error.message);
         return response.status(400).send(`Webhook Error:${error.message}`);
 
     }
