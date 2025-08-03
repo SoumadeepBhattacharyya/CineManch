@@ -92,12 +92,17 @@ const sendBookingConfirmationEmail= inngest.createFunction(
     {id:"send-booking-confirmation-email"},
     {event:"app/show.booked"},
 
+    
+
+
     async({event,step})=>{
         const {bookingId}=event.data;
         const booking =await Booking.findById(bookingId).populate({
             path:'show',
             populate:{path:"movie",model:"Movie"}
         }).populate('user');
+
+        
 
 
         await sendEmail({
@@ -113,8 +118,8 @@ const sendBookingConfirmationEmail= inngest.createFunction(
                     </p>
                     <p>Enjoy the show! 🍿</p>
                     <p>Thanks for booking with us!<br/>— CineManch Team</p>
-                    </div>
-`
+                    </div>`
+
         })
     }
 )
