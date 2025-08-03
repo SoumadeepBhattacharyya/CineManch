@@ -88,6 +88,10 @@ I independently built **Cinemanch** from scratch — from designing the UI to in
 ---
 
 
+🔗 Live Demo
+🌐 Click here to explore Cinemanch live
+
+You can sign up as a user to experience the ticket booking workflow and real-time alerts in action.
 
 ## 📎 Final Thoughts
 
