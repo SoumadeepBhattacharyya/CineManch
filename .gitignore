@@ -1,1 +1,53 @@
-node_modules
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables (secrets!)
+.env
+.env.*    # Covers .env.local, .env.production etc.
+
+# Build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+log.txt
+
+# Editor and system files
+.vscode/
+.idea/
+*.swp
+
+# Testing
+coverage/
+jest-coverage/
+
+# Optional: lock files (if you're not using npm ci consistently)
+package-lock.json
+yarn.lock
+
+# Next.js, React, Vite specific
+.next/
+out/
+.cache/
+.cache-loader/
+public/build/
+
+# Binaries
+*.exe
+*.out
+
+# Misc
+*.tgz
+
+# Ignore frontend/backend .env specifically
+frontend/.env*
+backend/.env*
